@@ -36,8 +36,9 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
 const JwtLogin = () => {
     const [loading, setLoading] = useState(false)
     const [userInfo, setUserInfo] = useState({
-        email: 'jason@ui-lib.com',
-        password: 'dummyPass',
+        // email: 'jason@ui-lib.com',
+        // password: 'dummyPass',
+        // role:'SUPPLIER',
     })
     const [message, setMessage] = useState('')
     const { login } = useAuth()
