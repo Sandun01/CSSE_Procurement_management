@@ -6,6 +6,7 @@ import cors from 'cors';
 import connectDB from './src/config/db.js';
 
 import userRoute from './src/routes/userRoutes.js';
+import SiteRoutes from './src/routes/SiteRoutes.js';
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 
 //routes
 app.use('/api/users', userRoute);
+app.use('/api/sites', SiteRoutes);
 
 const PORT = process.env.PORT || 5000;
 
