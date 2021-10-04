@@ -28,7 +28,47 @@ const purchaseOrderRoutes = [
         component: React.lazy(() => import('./ViewRequisition')),
         auth: authRoles.procurement_staff,
     },
-    
+    //supplier
+    {
+        path: '/purchaseOrders/my',
+        component: React.lazy(() => import('./SupplierOrders')),
+        auth: authRoles.supplier,
+    },
+    {
+        path: '/purchaseOrders/view/:id',
+        component: React.lazy(() => import('./ViewSupplierPurchaseOrder')),
+        auth: authRoles.supplier,
+    },
+    {
+        path: '/delivery_advice_notes/create/:id',
+        component: React.lazy(() => import('./delivery_advice_note/CreateDeliveryAdviceNote')),
+        auth: authRoles.supplier,
+    },
+    {
+        path: '/delivery_advice_notes/view/:id',
+        component: React.lazy(() => import('./delivery_advice_note/ViewDeliveryNote')),
+        auth: authRoles.order_management,
+    },
+    {
+        path: '/delivery_advice_notes/all',
+        component: React.lazy(() => import('./delivery_advice_note/AllDeliveries')),
+        auth: authRoles.supplier,
+    },
+    {
+        path: '/invoices/all',
+        component: React.lazy(() => import('./invoices/AllInvoices')),
+        auth: authRoles.supplier,
+    },
+    {
+        path: '/invoices/create/:id',
+        component: React.lazy(() => import('./invoices/CreateInvoice')),
+        auth: authRoles.supplier,
+    },
+    {
+        path: '/invoices/view/:id',
+        component: React.lazy(() => import('./invoices/ViewInvoice')),
+        auth: authRoles.order_management,
+    },
 
 ]
 
